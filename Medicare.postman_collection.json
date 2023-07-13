@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "2cc78d70-49fa-4c26-8bdc-0ae707cf889a",
+		"name": "Medicare",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26419073"
+	},
+	"item": [
+		{
+			"name": "Cart Checkout",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/medicare/cart/checkout?execution=e2s1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"medicare",
+						"cart",
+						"checkout"
+					],
+					"query": [
+						{
+							"key": "execution",
+							"value": "e2s1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
